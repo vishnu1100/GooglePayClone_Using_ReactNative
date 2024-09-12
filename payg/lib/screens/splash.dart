@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:payg/main.dart';
+import 'package:payg/screens/homescreen.dart';
 import 'package:payg/screens/splash.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Delay of 3 seconds before navigating to the next screen
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => Main(),  // Go to the Home Screen after the splash
+        builder: (context) => HomeScreen(),  // Go to the Home Screen after the splash
       ));
     });
   }
