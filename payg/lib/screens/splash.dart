@@ -6,6 +6,8 @@ import 'package:payg/screens/homescreen.dart';
 import 'package:payg/screens/splash.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -16,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     
     // Delay of 3 seconds before navigating to the next screen
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => HomeScreen(),  // Go to the Home Screen after the splash
       ));
@@ -25,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.blueAccent,
       body: Center(
         child: Column(
