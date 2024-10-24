@@ -23,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 70,
       ),
       const SizedBox(width: 16), // Reduced size for better spacing
-      Expanded( // Use Expanded to take up remaining space
-        child: const Text(
+      const Expanded( // Use Expanded to take up remaining space
+        child: Text(
           "Google Pay",
           style: TextStyle(
             color: Color.fromARGB(255, 65, 62, 62), // Black text to match the theme
@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ),
   actions: [
     IconButton(
-      icon: CircleAvatar(
+      icon: const CircleAvatar(
         radius: 35, // Half of the desired size (70 / 2)
         backgroundImage: AssetImage('assets/images/profile.jpg'), // Path to your image
       ),
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => profilescreen()), // Navigate to ProfileScreen
+          MaterialPageRoute(builder: (context) => const profilescreen()), // Navigate to ProfileScreen
         ); // Profile icon action
       },
     ),
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               height: 500,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/bg1.jpg'), // Path to your background image
                   fit: BoxFit.cover, // Ensures the image covers the entire container
@@ -75,12 +75,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
   width: 343,
   height: 259,
   child: Stack(
     children: [
-      Positioned(
+      const Positioned(
         left: 0,
         top: 0,
         child: SizedBox(
@@ -102,12 +102,12 @@ class _HomeScreenState extends State<HomeScreen> {
       Positioned(
         left: 12,
         top: 31,
-        child: Container(
+        child: SizedBox(
           width: 45,
           height: 66,
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 2,
                 top: 49,
                 child: Text(
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 45,
                   height: 45,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/45x45"),
                       fit: BoxFit.cover,
                     ),
@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     shadows: [
-                      BoxShadow(
+                      const BoxShadow(
                         color: Color(0x4C000000),
                         blurRadius: 3,
                         offset: Offset(1, 2),
@@ -154,12 +154,12 @@ class _HomeScreenState extends State<HomeScreen> {
       Positioned(
         left: 102,
         top: 31,
-        child: Container(
+        child: SizedBox(
           width: 45,
           height: 66,
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 6,
                 top: 49,
                 child: Text(
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   width: 45,
                   height: 45,
-                  decoration: ShapeDecoration(
+                  decoration: const ShapeDecoration(
                     color: Color(0xFFD9D9D9),
                     shape: OvalBorder(),
                     shadows: [
@@ -194,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 18,
                 top: 13,
                 child: Text(
@@ -216,12 +216,12 @@ class _HomeScreenState extends State<HomeScreen> {
       Positioned(
         left: 192,
         top: 31,
-        child: Container(
+        child: SizedBox(
           width: 45,
           height: 66,
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 4,
                 top: 49,
                 child: Text(
@@ -242,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   width: 45,
                   height: 45,
-                  decoration: ShapeDecoration(
+                  decoration: const ShapeDecoration(
                     color: Color(0xFFD9D9D9),
                     shape: OvalBorder(),
                     shadows: [
@@ -256,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 17,
                 top: 13,
                 child: Text(
@@ -278,12 +278,12 @@ class _HomeScreenState extends State<HomeScreen> {
       Positioned(
         left: 282,
         top: 31,
-        child: Container(
+        child: SizedBox(
           width: 45,
           height: 66,
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 10,
                 top: 49,
                 child: Text(
@@ -305,7 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 45,
                   height: 45,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/45x45"),
                       fit: BoxFit.fill,
                     ),
@@ -313,7 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     shadows: [
-                      BoxShadow(
+                      const BoxShadow(
                         color: Color(0x4C000000),
                         blurRadius: 3,
                         offset: Offset(1, 2),
