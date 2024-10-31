@@ -1,0 +1,38 @@
+Create project ------- npx @react-native-community/cli init first App
+
+
+//////////////////////////////////////////////////////////////
+
+
+Run Project -----  npx react-native run-android  or    npx react-native start
+
+//////////////////////////////////////////////////////////////
+
+
+buid apk  -------  gradlew assembleRelease
+
+
+////////////////////////////////////////////////////////
+
+Create Local properties /android/local.properties
+
+sdk.dir=/Users/username/Library/Android/sdk  # macOS
+
+sdk.dir=C:\\Users\\username\\AppData\\Local\\Android\\Sdk  # Windows 
+
+
+////////////////////////////////////////////////////////
+
+for deperate apk put /android/buid.gradle
+
+ android{
+
+     splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            universalApk false
+        }
+    }
+}
