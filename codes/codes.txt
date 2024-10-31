@@ -23,7 +23,7 @@ sdk.dir=C:\\Users\\username\\AppData\\Local\\Android\\Sdk  # Windows
 
 ////////////////////////////////////////////////////////
 
-for deperate apk put /android/buid.gradle
+for deperate apk put /android/app/buid.gradle
 
  android{
 
