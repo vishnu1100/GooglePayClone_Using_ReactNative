@@ -47,7 +47,7 @@ function App() {
             { uri: 'https://cdn-icons-png.flaticon.com/128/625/625599.png', label: 'Save' },
             { uri: 'https://cdn-icons-png.flaticon.com/128/9405/9405882.png', label: 'Invest' },
             { uri: 'https://cdn-icons-png.flaticon.com/128/196/196578.png', label: 'History' },
-            { uri: 'https://cdn-icons-png.flaticon.com/128/1633/1633721.png', label: 'More' }
+            { uri: 'https://cdn-icons-png.flaticon.com/128/2609/2609201.png', label: 'More' }
           ].map((icon, index) => (
             <View key={index} style={styles.iconWrapper}>
               <Image source={{ uri: icon.uri }} style={styles.iconimage} />
@@ -56,33 +56,84 @@ function App() {
           ))}
         </View>
 
-        {/* Quick Actions */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>People</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <View style={styles.actionContainer}>
-              <TouchableOpacity style={styles.actionButton}>
-                <Text style={styles.actionText}>Send Money</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.actionButton}>
-                <Text style={styles.actionText}>Request Money</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.actionButton}>
-                <Text style={styles.actionText}>Pay Bills</Text>
-              </TouchableOpacity>
+        <Text style={styles.sectionTitle}>People</Text>
+
+        <View style={styles.iconContainer}>
+          {/* First Row of Icons */}
+          {[
+            { uri: 'https://i.pinimg.com/236x/00/c6/a0/00c6a06f401a5468521b72678b9e6716.jpg', label: 'Rocky' },
+            { uri: 'https://media.vogue.co.uk/photos/64916f00ad4b7de8bf024aa2/2:3/w_2560%2Cc_limit/Mia_200623_lascape%2520MIA.jpg', label: 'Mia' },
+            { uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQessajFGlfsaMHQPc5N_NLTpyQecw-1ZVlbg&s', label: 'Jhonny' },
+            { uri: 'https://wallpapers.com/images/hd/dani-daniels-in-grey-tank-shirt-baks3onwmnv6muf2.jpg', label: 'Dani' }
+          ].map((icon, index) => (
+            <View key={index} style={styles.iconWrapper}>
+              <Image source={{ uri: icon.uri }} style={styles.peopleimage} />
+              <Text style={styles.iconLabel}>{icon.label}</Text>
             </View>
-          </ScrollView>
+          ))}
         </View>
+
+        <View style={styles.iconContainer}>
+          {/* Second Row of Icons */}
+          {[
+            { uri: 'https://i.pinimg.com/564x/58/69/12/586912499e6d51122e26b8940c05dc1a.jpg', label: 'Briga' },
+            { uri: 'https://i.pinimg.com/564x/76/ef/00/76ef006b3ab7496d3500ebb7a2cfd186.jpg', label: 'Khmer' },
+            { uri: 'https://i.pinimg.com/736x/6f/49/c7/6f49c76f50e88124dba6f764c14d469b.jpg', label: 'Aanba' },
+            { uri: 'https://cdn-icons-png.flaticon.com/128/2609/2609201.png', label: 'More' }
+          ].map((icon, index) => (
+            <View key={index} style={styles.iconWrapper}>
+              <Image source={{ uri: icon.uri }} style={styles.peopleimage} />
+              <Text style={styles.iconLabel}>{icon.label}</Text>
+            </View>
+          ))}
+        </View>
+
+
+        <Text style={styles.sectionTitle}>Businesses</Text>
+
+<View style={styles.iconContainer}>
+  {/* First Row of Icons */}
+  {[
+    { uri: 'https://cdn-icons-png.flaticon.com/128/355/355999.png', label: 'PlayStore' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/5977/5977576.png', label: 'Apple' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/16021/16021158.png', label: 'Amazon' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/3448/3448339.png', label: 'Redbus' }
+  ].map((icon, index) => (
+    <View key={index} style={styles.iconWrapper}>
+      <Image source={{ uri: icon.uri }} style={styles.peopleimage} />
+      <Text style={styles.iconLabel}>{icon.label}</Text>
+    </View>
+  ))}
+</View>
+
+<View style={styles.iconContainer}>
+  {/* Second Row of Icons */}
+  {[
+    { uri: 'https://cdn-icons-png.flaticon.com/128/1176/1176838.png', label: 'Recharge' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/9922/9922103.png', label: 'OYO' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/3670/3670147.png', label: 'Youtube' },
+    { uri: 'https://cdn-icons-png.flaticon.com/128/2609/2609201.png', label: 'More' }
+  ].map((icon, index) => (
+    <View key={index} style={styles.iconWrapper}>
+      <Image source={{ uri: icon.uri }} style={styles.peopleimage} />
+      <Text style={styles.iconLabel}>{icon.label}</Text>
+    </View>
+  ))}
+</View>
+
+
+
+
 
         {/* Recent Transactions */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Recent Transactions</Text>
+          {/* <Text style={styles.sectionTitle}>Recent Transactions</Text> */}
           <View style={styles.transactionCard}>
-            <Text style={styles.transactionText}>Paid to John Doe</Text>
+            <Text style={styles.transactionText}>Transaction History</Text>
             <Text style={styles.transactionAmount}>- $50.00</Text>
           </View>
           <View style={styles.transactionCard}>
-            <Text style={styles.transactionText}>Received from Jane Smith</Text>
+            <Text style={styles.transactionText}>Check Bank Balance</Text>
             <Text style={styles.transactionAmount}>+ $100.00</Text>
           </View>
           {/* Add more transaction items here as needed */}
@@ -99,16 +150,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around', // Spread icons evenly
     padding: 16,
     borderRadius: 10,              // Rounded edges for the view
-    marginVertical: 20,
+    marginVertical: 10,
   },
   iconWrapper: {
     alignItems: 'center',          // Center icons and labels
   },
+
+  
   iconimage: {
-    width: 30,       
-    height: 30,         
+    width: 40,                 
+    height: 40,       
     resizeMode: 'cover',
+      
+
   },
+
+  peopleimage: {
+    width: 60,                 
+    height: 60,
+    borderRadius: 25, 
+
+  },
+
+
   iconLabel: {
     fontSize: 12,                 // Small text below icons
     color: '#333',
