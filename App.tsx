@@ -130,12 +130,13 @@ function App() {
           {/* <Text style={styles.sectionTitle}>Recent Transactions</Text> */}
           <View style={styles.transactionCard}>
             <Text style={styles.transactionText}>Transaction History</Text>
-            <Text style={styles.transactionAmount}>- $50.00</Text>
-          </View>
-          <View style={styles.transactionCard}>
+            <Text style={styles.transactionsucessAmount}>+5000.00</Text>
+          </View><TouchableOpacity>
+          <View style={styles.balanceCard}>
+          
             <Text style={styles.transactionText}>Check Bank Balance</Text>
-            <Text style={styles.transactionAmount}>+ $100.00</Text>
-          </View>
+           
+          </View> </TouchableOpacity>
           {/* Add more transaction items here as needed */}
         </View>
 
@@ -234,16 +235,35 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    
   },
   transactionText: {
+    fontWeight: 'bold',
     fontSize: 16,
     color: '#333',
   },
   transactionAmount: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#00796b',
+    
   },
+  transactionsucessAmount: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color:'green',
+  },
+  balanceCard: {
+    padding: 16,
+    backgroundColor: '#f3e9e9',
+    borderRadius: 8,
+    marginBottom: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    
+    
+  },
+
+
 });
 
 export default App;
