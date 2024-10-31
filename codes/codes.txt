@@ -36,3 +36,5 @@ for deperate apk put /android/buid.gradle
         }
     }
 }
+
+////////////////////////////////////////////////////////
