@@ -57,7 +57,7 @@ Now that you have successfully run the app, let's modify it.
 
 ## Demo Apk is available on  release section:
 
- !!! Chech it Out !!!!!!!!!
+ !!! Chech it Out  available for android !!!!!!!!!
 
 ## Congratulations! :tada:
 
